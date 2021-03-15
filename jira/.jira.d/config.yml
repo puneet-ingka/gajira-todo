@@ -1,0 +1,12 @@
+config:
+  stop: true
+password-source: DXlAxkcFfcaAU82VIcF71Qvhu1pSjMjL2JMdlK
+endpoint: https://jira.digital.ingka.com/
+user: pujai
+login: puneet.jain@injka.com
+
+queries:
+  todo: |
+    resolution = unresolved {{if .project}}AND project = '{{.project}}'{{end}} AND status = 'To Do'
+  open: |
+    resolution = unresolved {{if .project}}AND project = '{{.project}}'{{end}} AND status = 'Open'
